@@ -91,6 +91,9 @@ abstract class RTCDataChannel {
   /// Closes when the [RTCDataChannel] is closed.
   late Stream<RTCDataChannelMessage> messageStream;
 
+  // Stream of buffered amount changed with the sent data size
+  late Stream<int> bufferedAmountStream;
+
   /// Send a message to this datachannel.
   /// To send a text message, use the default constructor to instantiate a text [RTCDataChannelMessage]
   /// for the [message] parameter.
