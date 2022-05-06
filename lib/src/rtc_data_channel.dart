@@ -78,7 +78,7 @@ abstract class RTCDataChannel {
   /// Get channel label
   String? get label;
 
-  int? get bufferedAmount;
+  Future<int?> get bufferedAmount;
 
   /// Set threshold to trigger onBufferedAmountLow callback
   int? bufferedAmountLowThreshold;
